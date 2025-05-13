@@ -1,0 +1,24 @@
+/* Özel Navigasyon Bar Stili */
+.custom-navbar {
+    background-color: #2c3e50; /* Koyu mavi-gri tonu */
+    padding: 15px 0;
+    border-radius: 8px;
+    margin: 20px;
+}
+
+.navbar-brand,
+.nav-link {
+    color: white !important;
+    transition: 0.3s;
+}
+
+.nav-link:hover {
+    color: #1abc9c !important; /* Hover rengi */
+}
+
+/* Mobile menüyü düzenle */
+@media (max-width: 992px) {
+    .custom-navbar {
+        margin: 10px;
+    }
+}
