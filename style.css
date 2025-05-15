@@ -40,6 +40,9 @@
   border: 10px solid #052a44; /* Kalın menü renginde çerçeve */
   border-radius: 15px;       /* Köşeleri yuvarlat */
   padding: 30px;             /* İç boşluk */
+  background: linear-gradient(135deg, #c0c0c0 0%, #e8e8e8 25%, #a0a0a0 50%, #d0d0d0 75%, #909090 100%);
+  box-shadow: inset 0 0 15px rgba(0,0,0,0.2);
+  position: relative;
 }
 
 
@@ -113,8 +116,6 @@
 
 
 
-/* ...existing code... */
-
 /* Login Page Styles */
 .login-page {
     background-color: #f8f9fa;
@@ -172,8 +173,6 @@
     font-size: 14px;
 }
 
-/* ...existing code... */
-
 /* Slider ve Şehir Sayfası Stilleri */
 .carousel-item img {
     height: 500px;
@@ -216,4 +215,26 @@
     font-size: 18px;
     line-height: 1.6;
     color: #333;
+}
+
+/* İlgi Alanları sayfası için ek stiller */
+#oyunlar-listesi .card {
+    transition: transform 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+#oyunlar-listesi .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+#oyunlar-listesi .card-img-top {
+    height: 180px;
+    object-fit: cover;
+}
+
+#kategori {
+    border: 2px solid #052a44;
+    padding: 10px;
+    border-radius: 8px;
 }
