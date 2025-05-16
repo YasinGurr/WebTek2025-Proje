@@ -46,7 +46,7 @@
 }
 
 .sitilli-yazi3::marker {
-    color: rgb(29, 29, 31);           /* madde işaretini belirli siyah tutmak için */
+    color: rgb(29, 29, 31);  /* madde işaretini belirli renkte, siyah tutmak için */
 }
 
 .vurgulu {
@@ -249,23 +249,17 @@
 }
 
 /* İlgi Alanları sayfası için ek stiller */
-#oyunlar-listesi .card {
-    transition: transform 0.3s ease;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+#film-listesi .card {
+    transition: transform 0.3s ease;  /* geçiş efekti süresi */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* kartların gölgesi */
 }
 
-#oyunlar-listesi .card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+#film-listesi .card:hover {
+    transform: translateY(-5px); /* imleç üstündeykn kart 5px yukarı kalkar */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* hover durumunda daha belirgin gölge */
 }
 
-#oyunlar-listesi .card-img-top {
-    height: 180px;
-    object-fit: cover;
-}
-
-#kategori {
-    border: 2px solid #052a44;
-    padding: 10px;
-    border-radius: 8px;
+#film-listesi .card-img-top { /* Kartın üst kısmındaki görsel 180 piksel yüksekliğe sabitlenir. */
+    height: 180px; 
+    object-fit: cover; /* Görselin kapsayıcıya sığacak şekilde ölçeklenmesini sağlar */
 }
