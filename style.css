@@ -205,47 +205,52 @@
 }
 
 /* Slider ve Şehir Sayfası Stilleri */
+
 .carousel-item img {
-    height: 500px;
-    object-fit: cover;
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    height: 500px; /* Görsel yüksekliğini 500 piksel olarak sabitler */
+    object-fit: cover; /* Görselin kapsayıcıya tam sığacak şekilde ölçeklenmesini sağlar */
+    border-radius: 1px; /* Görselin köşelerini 12 piksel yuvarlatır */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Görsele hafif bir gölge efekti ekler */
 }
+
 
 .carousel-item a {
-    display: block;
-    position: relative;
-    color: white;
-    text-decoration: none;
+    display: block; /* Bağlantıyı blok element olarak gösterir */
+    position: relative; /* Göreceli konumlandırma ayarlar */
+
 }
 
+/* Fare ile üzerine gelindiğinde carousel başlık alanının stilini değiştirir */
 .carousel-item a:hover .carousel-caption {
-    background-color: rgba(5, 42, 68, 0.7);
-    border-radius: 8px;
-    transition: background-color 0.3s ease;
+    background-color: rgba(5, 42, 68, 0.7); /* Yarı-saydam koyu mavi arka plan rengi ekler */
+    border-radius: 8px; /* Köşeleri 8 piksel yuvarlatır */
+    transition: background-color 0.3s ease; /* Arka plan rengi değişimini 0.3 saniyede yumuşak geçişle yapar */
 }
 
+/* Şehir bilgileri bölümünün genel stilini tanımlar */
 .sehir-bilgi {
-    margin: 50px auto;
-    max-width: 80%;
-    text-align: center;
-    border: 10px solid #052a44;
-    border-radius: 15px;
-    padding: 30px;
-    background-color: #f8f9fa;
+    margin: 50px auto; /* Üstten ve alttan 50px, sağdan soldan otomatik kenar boşluğu ayarlar */
+    max-width: 80%; /* Maksimum genişliği ekranın %80'i olarak sınırlar */
+    text-align: center; /* İçeriği ortalar */
+    border: 10px solid #052a44; /* 10 piksel kalınlığında koyu mavi kenarlık ekler */
+    border-radius: 15px; /* Köşeleri 15 piksel yuvarlatır */
+    padding: 30px; /* İçeriğe 30 piksel iç kenar boşluğu ekler */
+    background-color: #f8f9fa; /* Açık gri arka plan rengi ayarlar */
 }
 
+/* Şehir bilgileri başlıklarının stilini tanımlar */
 .sehir-bilgi h2 {
-    font-family: Fantasy;
-    font-size: 32px;
-    color: rgb(29, 29, 31);
-    margin-bottom: 20px;
+    font-family: Fantasy; /* Yazı tipini Fantasy olarak ayarlar */
+    font-size: 32px; /* Yazı boyutunu 32 piksel yapar */
+    color: rgb(29, 29, 31); /* Yazı rengini koyu gri olarak ayarlar */
+    margin-bottom: 20px; /* Alt kenardan 20 piksel boşluk bırakır */
 }
 
+/* Şehir bilgileri paragraflarının stilini tanımlar */
 .sehir-bilgi p {
-    font-size: 18px;
-    line-height: 1.6;
-    color: #333;
+    font-size: 18px; /* Yazı boyutunu 18 piksel yapar */
+    line-height: 1.6; /* Satır yüksekliğini yazı boyutunun 1.6 katı olarak ayarlar */
+    color: #333; /* Yazı rengini koyu gri olarak ayarlar */
 }
 
 /* İlgi Alanları sayfası için ek stiller */
