@@ -38,6 +38,23 @@
     font-weight: bold;
 }
 
+.sitilli-yazi3 {
+    font-family: monospace; 
+    font-size: 20px;
+    color: rgb(160, 12, 12);
+    font-weight: bold;
+}
+
+.sitilli-yazi3::marker {
+    color: rgb(29, 29, 31);           /* madde işaretini belirli siyah tutmak için */
+}
+
+.vurgulu {
+    font-weight: bold;   
+    font-size: 23px;   
+    color: #000;         
+}
+
 
 
 
