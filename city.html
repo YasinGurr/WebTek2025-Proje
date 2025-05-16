@@ -45,85 +45,79 @@
     </nav>
 
     <!-- Sayfa içeriği -->
-    <div class="container mt-4">
-        <h1 class="text-center sitilli-yazi mb-4">Rize</h1>
+    <div class="container mt-4"> <!--sayfanın içeriğini ortalayan ve üst kısmında biraz boşluk bırakan bir konteyner. -->
+        <h1 class="text-center sitilli-yazi mb-4">Rize</h1> <!-- "text-center" ortalamak için "mb-4" alt boşluk -->
         
         <!-- Slider Başlangıç -->
-        <div id="citySlider" class="carousel slide mb-5" data-bs-ride="carousel">
-            <!-- Slider Göstergeleri -->
-            <div class="carousel-indicators">
+        <div id="citySlider" class="carousel slide mb-5">
+            <!-- "id=citySlider" slider'a özel kimlik, class="carousel slider" bootstrap'in slider biçimini tanımlamak için -->
+            <div class="carousel-indicators"> <!-- Slider'ın altındaki küçük kontrol noktaları -->
                 <button type="button" data-bs-target="#citySlider" data-bs-slide-to="0" class="active"></button>
                 <button type="button" data-bs-target="#citySlider" data-bs-slide-to="1"></button>
                 <button type="button" data-bs-target="#citySlider" data-bs-slide-to="2"></button>
                 <button type="button" data-bs-target="#citySlider" data-bs-slide-to="3"></button>
             </div>
             
-            <!-- Slider Resimleri - Tıklanabilir -->
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <a href="sehir-detay1.html">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/f/fe/Zilkale.jpg" class="d-block w-100" alt="Şehir Görünümü 1">
-                        <div class="carousel-caption d-none d-md-block">
-                            <h5>Şehir Manzarası</h5>
-                            <p>Şehrimin muhteşem panoramik görüntüsü</p>
+            <!-- Slider Resimleri - Tıklanabilir bölüm başlangıcı -->
+            <div class="carousel-inner"> <!-- Carousel içeriğini tutan ana konteyner -->
+                <div class="carousel-item active"> <!-- İlk resim aktif olarak gösterilecek -->
+                    <a href="https://tr.wikipedia.org/wiki/Zilkale#:~:text=Zilkale%20ya%20da%20as%C4%B1l%20ad%C4%B1yla,kesin%20olarak%20bilinmeyen%20bir%20kaledir.&text=14.%20veya%2015.%20y%C3%BCzy%C4%B1lda%20in%C5%9Fa,ve%20bir%20g%C3%B6zetleme%20kulesinden%20olu%C5%9Fur.">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/f/fe/Zilkale.jpg" class="d-block w-100" alt="zilkale uzaktan görünüm"> <!-- class="d-block w-100"  d-block blok gibi davransın ve kapsayıcısının tüm genişliğini kaplaması için w-100 resmin genişliğini tamamen uygulamak için. -->
+                        <div class="carousel-caption d-none d-md-block"> <!-- slaytın üstüne açıklama kutusu, html elementini gizlemek, orta ve büyük ekranlarda görüntülenme -->
+                            <h5>Zilkale</h5> 
                         </div>
                     </a>
                 </div>
-                <div class="carousel-item">
+                <div class="carousel-item"> <!-- İkinci resim -->
                     <a href="https://tr.wikipedia.org/wiki/Anzer_Yaylas%C4%B1">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ed/Anzer_yaylas%C4%B1.JPG/1920px-Anzer_yaylas%C4%B1.JPG" class="d-block w-100" alt="Şehir Görünümü 2">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ed/Anzer_yaylas%C4%B1.JPG/1920px-Anzer_yaylas%C4%B1.JPG" class="d-block w-100" alt="Anzer Yaylası görünümü">
                         <div class="carousel-caption d-none d-md-block">
-                            <h5>Anzer Yaylası</h5>
-                            
+                            <h5>Anzer Yaylası</h5> 
                         </div>
                     </a>
                 </div>
-                <div class="carousel-item">
-                    <a href="sehir-detay3.html">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/5/5b/Ayder7.jpg" class="d-block w-100" alt="Şehir Görünümü 3">
+                <div class="carousel-item"> <!-- Üçüncü resim -->
+                    <a href="https://tr.wikipedia.org/wiki/Ayder">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/5/5b/Ayder7.jpg" class="d-block w-100" alt="Ayder Yaylası görünümü">
                         <div class="carousel-caption d-none d-md-block">
-                            <h5>Doğal Güzellikler</h5>
-                            <p>Şehrimin etrafındaki doğal manzaralar</p>
+                            <h5>Ayder Yaylası</h5> <!-- Resim başlığı -->
                         </div>
                     </a>
                 </div>
-                <div class="carousel-item">
-                    <a href="sehir-detay4.html">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Entrance_of_the_Castle_of_Rize%2C_Rize%2C_Turkey.JPG/1280px-Entrance_of_the_Castle_of_Rize%2C_Rize%2C_Turkey.JPG" class="d-block w-100" alt="Şehir Görünümü 4">
-                        <div class="carousel-caption d-none d-md-block">
-                            <h5>Modern Yapılar</h5>
-                            <p>Şehrimdeki çağdaş mimari örnekleri</p>
+                <div class="carousel-item"> <!-- Dördüncü resim -->
+                    <a href="https://tr.wikipedia.org/wiki/%C3%87at,_%C3%87aml%C4%B1hem%C5%9Fin"> <!-- Detay sayfasına yönlendirme -->
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/14/%C3%87atK%C3%B6y%C3%BC.jpg/1920px-%C3%87atK%C3%B6y%C3%BC.jpg" class="d-block w-100" alt="Çat köyü görünümü"> <!-- Dördüncü resim -->
+                        <div class="carousel-caption d-none d-md-block"> <!-- Başlık ve açıklama bölümü -->
+                            <h5>Çat Köyü</h5> 
                         </div>
                     </a>
                 </div>
             </div>
             
-            <!-- Slider Kontrolleri -->
-            <button class="carousel-control-prev" type="button" data-bs-target="#citySlider" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Önceki</span>
+            <!-- Slider Kontrol Düğmeleri -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#citySlider" data-bs-slide="prev"> <!-- Önceki slayta geçiş düğmesi -->
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span> <!-- Önceki düğme ikonu -->
             </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#citySlider" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Sonraki</span>
+            <button class="carousel-control-next" type="button" data-bs-target="#citySlider" data-bs-slide="next"> <!-- Sonraki slayta geçiş düğmesi -->
+                <span class="carousel-control-next-icon" aria-hidden="true"></span> <!-- Sonraki düğme ikonu -->
             </button>
         </div>
-        <!-- Slider Bitiş -->
+        <!-- Slider Bitiş - Carousel yapısının sonu -->
         
         <!-- Kategori ve sitilli-yazi kullanımı -->
         <div class="kategori">
             <h2 class="sitilli-yazi">Rize Hakkında</h2>
-            <p>Rize, Türkiye'nin Karadeniz Bölgesi'nde yer alan, doğal güzellikleri ve çay bahçeleriyle ünlü bir şehirdir. Yemyeşil dağları, muhteşem yaylaları, tarihi kültürü ve misafirperver insanlarıyla Karadeniz'in incisi olarak kabul edilir.</p>
+            <p class="sitilli-yazi2">Rize, Türkiye'nin Karadeniz Bölgesi'nde yer alan, doğal güzellikleri ve çay bahçeleriyle ünlü bir şehirdir. Yemyeşil dağları, muhteşem yaylaları, tarihi kültürü ve misafirperver insanlarıyla Karadeniz'in incisi olarak kabul edilir.</p>
             
-            <div class="hobi-kutusu">
-                <div class="hobi">
+            <div>
+                <div>
                     <h3 class="sitilli-yazi" style="font-size: 28px;">Doğal Güzellikler</h3>
-                    <p>Ayder Yaylası, Kaçkar Dağları, Çamlıhemşin gibi eşsiz doğal güzellikleriyle ziyaretçilerini büyüler.</p>
+                    <p class="sitilli-yazi2" >Ayder Yaylası, Kaçkar Dağları, Çamlıhemşin gibi eşsiz doğal güzellikleriyle ziyaretçilerini büyüler.</p>
                 </div>
                 
-                <div class="hobi">
+                <div>
                     <h3 class="sitilli-yazi" style="font-size: 28px;">Çay Kültürü</h3>
-                    <p>Rize, Türkiye'nin çay başkentidir. Yeşil çay bahçeleri şehrin simgesi haline gelmiştir.</p>
+                    <p class="sitilli-yazi2">Rize, Türkiye'nin çay başkentidir. Yeşil çay bahçeleri şehrin simgesi haline gelmiştir.</p>
                 </div>
             </div>
         </div>
@@ -131,38 +125,38 @@
         <!-- Rize Genel Bilgiler -->
         <div class="kategori">
             <h2 class="sitilli-yazi">Rize Hakkında Genel Bilgiler</h2>
-            <p>Karadeniz Bölgesi'nin doğusunda yer alan Rize, doğal güzellikleri ve zengin kültürüyle öne çıkan bir ilimizdir.</p>
+            <p class="sitilli-yazi2">Karadeniz Bölgesi'nin doğusunda yer alan Rize, doğal güzellikleri ve zengin kültürüyle öne çıkan bir ilimizdir.</p>
             
-            <div class="hobi-kutusu">
-                <div class="hobi">
+            <div>
+                <div>
                     <h3 class="sitilli-yazi" style="font-size: 28px;">Coğrafi Bilgiler</h3>
-                    <p><strong>Yüzölçümü:</strong> 3.920 km²</p>
-                    <p><strong>Rakım:</strong> 6 metre (şehir merkezi)</p>
-                    <p><strong>Konumu:</strong> 41° K, 40° D koordinatlarında, Karadeniz'in doğu kıyısında yer alır</p>
-                    <p><strong>Komşu İller:</strong> Artvin (doğuda), Erzurum (güneyde), Trabzon (batıda)</p>
+                    <p class="sitilli-yazi2"><strong>Yüzölçümü:</strong> 3.920 km² </p>
+                    <p class="sitilli-yazi2"><strong>Rakım:</strong> 6 metre (şehir merkezi)</p>
+                    <p class="sitilli-yazi2"><strong>Konumu:</strong> 41° K, 40° D koordinatlarında, Karadeniz'in doğu kıyısında yer alır</p>
+                    <p class="sitilli-yazi2"><strong>Komşu İller:</strong> Artvin (doğuda), Erzurum (güneyde), Trabzon (batıda)</p>
                 </div>
                 
-                <div class="hobi">
+                <div>
                     <h3 class="sitilli-yazi" style="font-size: 28px;">Demografik Bilgiler</h3>
-                    <p><strong>Nüfus:</strong> Yaklaşık 350.000 (2023)</p>
-                    <p><strong>İlçeleri:</strong> Merkez, Ardeşen, Çamlıhemşin, Çayeli, Derepazarı, Fındıklı, Güneysu, Hemşin, İkizdere, İyidere, Kalkandere ve Pazar</p>
-                    <p><strong>Nüfus Yoğunluğu:</strong> 89 kişi/km²</p>
+                    <p class="sitilli-yazi2"><strong>Nüfus:</strong> Yaklaşık 350.000 (2023)</p>
+                    <p class="sitilli-yazi2"><strong>İlçeleri:</strong> Merkez, Ardeşen, Çamlıhemşin, Çayeli, Derepazarı, Fındıklı, Güneysu, Hemşin, İkizdere, İyidere, Kalkandere ve Pazar</p>
+                    <p class="sitilli-yazi2"><strong>Nüfus Yoğunluğu:</strong> 89 kişi/km²</p>
                 </div>
             </div>
             
-            <div class="hobi-kutusu" style="margin-top: 30px;">
-                <div class="hobi">
+            <div>
+                <div >
                     <h3 class="sitilli-yazi" style="font-size: 28px;">Ekonomi</h3>
-                    <p><strong>Ana Geçim Kaynağı:</strong> Çay tarımı ve turizm</p>
-                    <p><strong>Tarım Ürünleri:</strong> Çay, mısır, fındık, kivi</p>
-                    <p><strong>Sanayi:</strong> Çay işleme fabrikaları, küçük ölçekli üretim tesisleri</p>
+                    <p class="sitilli-yazi2"><strong>Ana Geçim Kaynağı:</strong> Çay tarımı ve turizm</p>
+                    <p class="sitilli-yazi2"><strong>Tarım Ürünleri:</strong> Çay, mısır, fındık, kivi</p>
+                    <p class="sitilli-yazi2"><strong>Sanayi:</strong> Çay işleme fabrikaları, küçük ölçekli üretim tesisleri</p>
                 </div>
                 
-                <div class="hobi">
+                <div >
                     <h3 class="sitilli-yazi" style="font-size: 28px;">İklim</h3>
-                    <p><strong>İklim Tipi:</strong> Karadeniz iklimi (bol yağışlı)</p>
-                    <p><strong>Yıllık Ortalama Yağış:</strong> 2.400 mm (Türkiye'nin en çok yağış alan ili)</p>
-                    <p><strong>Ortalama Sıcaklık:</strong> Yaz 23°C, Kış 7°C</p>
+                    <p class="sitilli-yazi2"><strong>İklim Tipi:</strong> Karadeniz iklimi (bol yağışlı)</p>
+                    <p class="sitilli-yazi2"><strong>Yıllık Ortalama Yağış:</strong> 2.400 mm (Türkiye'nin en çok yağış alan ili)</p>
+                    <p class="sitilli-yazi2"><strong>Ortalama Sıcaklık:</strong> Yaz 23°C, Kış 7°C</p>
                 </div>
             </div>
         </div>
@@ -170,23 +164,54 @@
         <!-- Rize Tarihi -->
         <div class="kategori">
             <h2 class="sitilli-yazi">Rize'nin Tarihi</h2>
-            <p>Rize, zengin bir tarihi geçmişe sahip olup, farklı medeniyetlere ev sahipliği yapmıştır.</p>
+            <p class="sitilli-yazi2">Rize, zengin bir tarihi geçmişe sahip olup, farklı medeniyetlere ev sahipliği yapmıştır.</p>
             
-            <div class="hobi-kutusu">
-                <div class="hobi">
+            <div>
+                <div>
                     <h3 class="sitilli-yazi" style="font-size: 28px;">Tarihsel Gelişim</h3>
-                    <p>Rize'nin tarihi M.Ö. 3000 yıllarına kadar uzanmaktadır. Bölge tarih boyunca Kolhlar, Miletler, Persler, Romalılar, Bizanslılar, Cenevizliler ve Osmanlılar gibi medeniyetlerin yönetimi altında kalmıştır.</p>
-                    <p>1461 yılında Fatih Sultan Mehmet döneminde Osmanlı İmparatorluğu topraklarına katılan Rize, 1916-1918 yılları arasında kısa bir süre Rus işgali altında kalmıştır.</p>
+                    <p class="sitilli-yazi2">Rize'nin tarihi M.Ö. 3000 yıllarına kadar uzanmaktadır. Bölge tarih boyunca Kolhlar, Miletler, Persler, Romalılar, Bizanslılar, Cenevizliler ve Osmanlılar gibi medeniyetlerin yönetimi altında kalmıştır.</p>
+                    <p class="sitilli-yazi2">1461 yılında Fatih Sultan Mehmet döneminde Osmanlı İmparatorluğu topraklarına katılan Rize, 1916-1918 yılları arasında kısa bir süre Rus işgali altında kalmıştır.</p>
                 </div>
                 
-                <div class="hobi">
+                <div>
                     <h3 class="sitilli-yazi" style="font-size: 28px;">Çay Kültürünün Tarihi</h3>
-                    <p>Rize'de çay tarımı 1924 yılında Ziraat Mühendisi Zihni Derin'in girişimleriyle başlamıştır. Çay tohumlarının Batum'dan getirilmesiyle bölgede çay üretimi yaygınlaşmış, zamanla Rize'nin simgesi ve ana geçim kaynağı haline gelmiştir.</p>
-                    <p>1947 yılında kurulan ÇAYKUR (Çay İşletmeleri Genel Müdürlüğü), Rize'nin ekonomik yapısında büyük rol oynamaktadır.</p>
+                    <p class="sitilli-yazi2">Rize'de çay tarımı 1924 yılında Ziraat Mühendisi Zihni Derin'in girişimleriyle başlamıştır. Çay tohumlarının Batum'dan getirilmesiyle bölgede çay üretimi yaygınlaşmış, zamanla Rize'nin simgesi ve ana geçim kaynağı haline gelmiştir.</p>
+                    <p class="sitilli-yazi2">1947 yılında kurulan ÇAYKUR (Çay İşletmeleri Genel Müdürlüğü), Rize'nin ekonomik yapısında büyük rol oynamaktadır.</p>
                 </div>
             </div>
         </div>
+    
+        <!--Zilkale-->
+       <div class="kategori">
+            <h2 class="sitilli-yazi">Zilkale</h2>
+            <p class="sitilli-yazi2">Zilkale ya da asıl adıyla Zir Kale, Rize'nin Çamlıhemşin ilçesi Fırtına Deresi Vadisi'nde, deniz seviyesinden yaklaşık 1000 m yükseklikte yer alan, yapılış tarihi kesin olarak bilinmeyen tarihi bir kaledir. 14. veya 15. yüzyılda inşa edildiği düşünülen kale, iç kale, orta kale ve bir gözetleme kulesinden oluşur. Fırtına Vadisi'nin girişini kontrol eden stratejik bir noktada yer alan Zilkale, bölgedeki Ceneviz ticaret yollarını korumak amacıyla inşa edilmiş olabileceği düşünülmektedir. Kalenin duvarları ve kuleleri günümüzde hâlâ ayaktadır ve restore edilerek ziyarete açılmıştır. Bu tarihi yapı, sık ormanlar ve yüksek dağlarla çevrili muhteşem doğası ile fotoğrafçılar ve doğa tutkunları için önemli bir uğrak noktası haline gelmiştir.</p>
+       </div>
+
+        <!--Anzer Yaylası-->
+        <div class="kategori">
+            <h2 class="sitilli-yazi">Anzer Yaylası</h2>
+            <p class="sitilli-yazi2">Anzer Yaylası (eski adıyla Ballıköy), Rize'nin İkizdere ilçesinde, deniz seviyesinden 2100-3000 metre yükseklikte bulunan bir yayladır. Yöre, dünyaca ünlü Anzer Balı'nın üretim merkezidir. Anzer Balı, yörede yetişen ve 300'den fazla endemik bitki çeşidinden üretilmesi nedeniyle büyük bir şöhrete sahiptir. Anzer Yaylası, sarp yamaçları, zengin bitki örtüsü ve bakir doğal güzellikleri ile ünlüdür. Bu bölge aynı zamanda önemli bir eko-turizm merkezidir. Geleneksel yayla evleri, yöresel mimarinin güzel örneklerini sergilemekte olup, her yıl yaz aylarında şenliklerle pek çok ziyaretçiyi ağırlamaktadır. Anzer Yaylası'nın yüksekliği ve kar yağışı nedeniyle ulaşım genellikle Haziran-Eylül ayları arasında mümkün olmaktadır. Bu dönemde bölge çiçeklerle kaplanmakta ve yemyeşil bir görünüm kazanmaktadır.</p>
+        </div>
+
+        <!--Ayder Yaylası-->
+        <div class="kategori">
+            <h2 class="sitilli-yazi">Ayder Yaylası</h2>
+            <p class="sitilli-yazi2">Ayder, Rize'nin Çamlıhemşin ilçesinde bulunan, denizden 1350 metre yükseklikte yer alan ünlü bir yayladır. Ayder, 1987 yılında turizm merkezi ilan edilmiş olup, yeşil doğası, şifalı kaplıcaları ve yöresel mimarisi ile Türkiye'nin en çok bilinen ve ziyaret edilen yaylalarından biridir. Yörede bulunan kaplıca suyu, romatizma ve mide rahatsızlıkları gibi çeşitli hastalıklara iyi geldiği düşünülen 50°C sıcaklığındaki şifalı sularıyla ünlüdür. Ayder Yaylası'nın doğal güzellikleri arasında Fırtına Deresi, Galer Düzü, Huser Yaylası gibi yerler bulunmaktadır. Kaçkar Dağları Milli Parkı'na yapılan yürüyüşlerin başlangıç noktası olarak da kullanılmaktadır. Ayder Yaylası son yıllarda yoğun yapılaşmaya maruz kalmış ve bu durum bölgenin doğal dokusunu tehdit ettiğinden, 2019 yılında başlayan bir dönüşüm projesi ile yaylanın özgün yapısını korumaya yönelik çalışmalar yürütülmektedir.</p>
+        </div>
+
+        <!--Çat Köyü-->
+        <div class="kategori">
+            <h2 class="sitilli-yazi">Çat Köyü</h2>
+            <p class="sitilli-yazi2">Çat, Rize'nin Çamlıhemşin ilçesine bağlı, deniz seviyesinden yaklaşık 1000 metre yükseklikte bulunan tarihi bir köydür. Geleneksel Hemşin mimarisinin en güzel örneklerinin bulunduğu köy, taş ve ahşap işçiliğiyle inşa edilmiş yüzlerce yıllık evleri, tarihi köprüleri ve serender adı verilen tahıl ambarlarıyla ünlüdür. Çat Köyü, Fırtına Deresi vadisinde, yeşilin her tonunun görülebildiği muhteşem bir doğa içerisinde konumlanmıştır. Bölgede bulunan geleneksel konutlar, bölgenin iklim koşullarına uygun olarak inşa edilmiş olup, alt katları taştan, üst katları ahşaptan yapılmıştır. Köyün etrafını çevreleyen derin vadiler ve yüksek dağlar, trekking ve doğa yürüyüşleri için ideal bir ortam sunmaktadır. Çat Köyü, aynı zamanda yöresel Karadeniz mutfağının lezzetlerini tatmak isteyenler için de önemli bir destinasyondur. Köy, son yıllarda kültür turizmi açısından giderek artan bir ilgi görmektedir.</p>
+        </div>
+
     </div>
+
+    <footer class="container-fluid text-center bg-dark text-white py-3">
+        <p>&copy; 2025 - Tüm hakları saklıdır.</p>
+    </footer>
+
+
 
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
