@@ -3,16 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=0.9">
-    <title>Hakkımda</title>
-    
+    <title>İletişim Formu</title>
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    
     <!-- Özel CSS -->
     <link rel="stylesheet" href="style.css">
+    <!-- Vue.js CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
 </head>
 <body>
-    <!-- NAVIGASYON BAR (login.html hariç tüm sayfalarda) -->
+    <!-- Navigasyon Bar -->
     <nav class="custom-navbar navbar navbar-expand-lg">
         <div class="container-fluid">
             <a class="navbar-brand" href="about.html">Ana Sayfa</a>
@@ -25,7 +25,7 @@
                         <a class="nav-link" href="login.html">Giriş Yap</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="contact.html">İletişim</a>
+                        <a class="nav-link active" href="contact.html">İletişim</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="cv.html">Özgeçmiş</a>
@@ -38,11 +38,129 @@
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="interests.html">İlgi Alanlarım</a>
+                    </li>
                 </ul>
             </div>
         </div>
     </nav>
 
-    <!-- Sayfa içeriği -->
+    <div class="container mt-5">
+        <h1 class="text-center sitilli-yazi mb-4">İletişim</h1>
+        
+        <div class="kategori">
+            <!-- Normal Form -->
+            <form id="contactForm" class="p-4" novalidate>
+                <div class="row mb-3">
+                    <div class="col-md-6 mb-3">
+                        <label for="fullName" class="form-label">Ad Soyad *</label>
+                        <input type="text" class="form-control" id="fullName" name="fullName" placeholder="Adınızı ve soyadınızı giriniz">
+                        <div class="text-danger" id="fullNameError"></div>
+                    </div>
+                    
+                    <div class="col-md-6 mb-3">
+                        <label for="email" class="form-label">E-posta *</label>
+                        <input type="email" class="form-control" id="email" name="email" placeholder="E-posta adresinizi giriniz">
+                        <div class="text-danger" id="emailError"></div>
+                    </div>
+                </div>
+                
+                <div class="row mb-3">
+                    <div class="col-md-6 mb-3">
+                        <label for="phone" class="form-label">Telefon *</label>
+                        <input type="tel" class="form-control" id="phone" name="phone" placeholder="Telefon numaranızı giriniz">
+                        <div class="text-danger" id="phoneError"></div>
+                    </div>
+                    
+                    <div class="col-md-6 mb-3">
+                        <label for="subject" class="form-label">Konu *</label>
+                        <select class="form-select" id="subject" name="subject">
+                            <option value="">Seçiniz</option>
+                            <option value="bilgi">Bilgi Talebi</option>
+                            <option value="siparis">Sipariş Bilgisi</option>
+                            <option value="sikayet">Şikayet</option>
+                            <option value="oneri">Öneri</option>
+                            <option value="diger">Diğer</option>
+                        </select>
+                        <div class="text-danger" id="subjectError"></div>
+                    </div>
+                </div>
+                
+                <div class="mb-3">
+                    <label class="form-label">İletişim Tercihiniz *</label>
+                    <div class="d-flex gap-3">
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="contactPreference" id="prefEmail" value="email">
+                            <label class="form-check-label" for="prefEmail">E-posta</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="contactPreference" id="prefPhone" value="phone">
+                            <label class="form-check-label" for="prefPhone">Telefon</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="contactPreference" id="prefBoth" value="both">
+                            <label class="form-check-label" for="prefBoth">Her ikisi</label>
+                        </div>
+                    </div>
+                    <div class="text-danger" id="preferenceError"></div>
+                </div>
+                
+                <div class="mb-3">
+                    <label class="form-label">İlgi Alanlarınız</label>
+                    <div class="d-flex flex-wrap gap-3">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" name="interests" id="intTech" value="technology">
+                            <label class="form-check-label" for="intTech">Teknoloji</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" name="interests" id="intScience" value="science">
+                            <label class="form-check-label" for="intScience">Bilim</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" name="interests" id="intArt" value="art">
+                            <label class="form-check-label" for="intArt">Sanat</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" name="interests" id="intSports" value="sports">
+                            <label class="form-check-label" for="intSports">Spor</label>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="mb-3">
+                    <label for="message" class="form-label">Mesajınız *</label>
+                    <textarea class="form-control" id="message" name="message" rows="5" placeholder="Mesajınızı yazınız"></textarea>
+                    <div class="text-danger" id="messageError"></div>
+                </div>
+                
+                <div class="mb-4">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="agreement" name="agreement">
+                        <label class="form-check-label" for="agreement">
+                            Kişisel verilerimin işlenmesini kabul ediyorum *
+                        </label>
+                    </div>
+                    <div class="text-danger" id="agreementError"></div>
+                </div>
+                
+                <!-- Mevcut form kodunun sonuna butonları ekleyin -->
+                <div class="d-flex gap-3 justify-content-center mt-4">
+                    <button type="button" id="clearForm" class="btn btn-warning">Temizle</button>
+                    <button type="button" id="submitForm" class="btn btn-success">Gönder</button>
+                    <button type="button" id="validateJS" class="btn btn-secondary">JavaScript ile Doğrula</button>
+                    <button type="button" id="validateVue" class="btn btn-primary">Vue.js ile Doğrula</button>
+                </div>
+            </form>
+
+            <!-- Vue Form (başlangıçta gizli) -->
+            <div id="vueApp" style="display: none;" class="p-4">
+                <!-- Vue.js form yapısı -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Form Validation JS -->
+    <script src="contact.js"></script>
 </body>
 </html>
