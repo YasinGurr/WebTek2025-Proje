@@ -23,7 +23,7 @@
     }
 }
 
-/*------------------------------------------------------------------*/
+/*kullanılan  yazı sitilleri*/
 .sitilli-yazi {
     font-family: Fantasy; 
     font-size: 40px;
@@ -31,44 +31,52 @@
 
 }
 
+.sitilli-yazi2 {
+    font-family: monospace; 
+    font-size: 20px;
+    color: rgb(40, 40, 53);
+    font-weight: bold;
+}
+
 
 
 
 .kategori {
-    margin: 50px auto;
-    max-width: 80%;
-    text-align: center;
-    border: 10px solid #052a44;
-    /* Kalın menü renginde çerçeve */
-    border-radius: 15px;
-    /* Köşeleri yuvarlat */
-    padding: 30px;
-    /* İç boşluk */
-    background: linear-gradient(135deg, #c0c0c0 0%, #e8e8e8 25%, #a0a0a0 50%, #d0d0d0 75%, #909090 100%);
-    box-shadow: inset 0 0 15px rgba(0, 0, 0, 0.2);
-    position: relative;
+    margin: 50px auto; /* Üstten ve alttan 50px, sağdan ve soldan otomatik kenar boşluğu */
+    max-width: 80%; /* Maksimum genişlik ekranın %80'i */
+    text-align: center; /* Metni ortala */
+    border: 10px solid #052a44; /* Kalın menü renginde çerçeve */
+    border-radius: 15px; /* Köşeleri yuvarlat */
+    padding: 30px; /* İç boşluk */
+    background: linear-gradient(135deg, #c0c0c0 0%, #e8e8e8 25%, #a0a0a0 50%, #d0d0d0 75%, #909090 100%); /* Farklı gri tonlarında degrade arka plan */
+    box-shadow: inset 0 0 15px rgba(0, 0, 0, 0.2); /* İç kısımda hafif gölge efekti */
+    position: relative; /* Göreceli konumlandırma */
 }
 
 
 
 
+/* Hobi kutularını içeren ana kapsayıcı element */
 .hobi-kutusu {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    flex-wrap: wrap;
+    display: flex;               /* Esnek kutu düzeni kullanır, içerikleri yan yana dizer */
+    justify-content: center;     /* İçeriği yatay eksende ortalar */
+    gap: 30px;                   /* Hobi kutuları arasında 30px boşluk bırakır */
+    flex-wrap: wrap;             /* Ekran küçüldüğünde öğelerin alt satıra geçmesini sağlar */
 }
 
+/* Her bir hobi kutusunun kendi stil tanımları */
 .hobi {
-    text-align: center;
-    max-width: 500px;
+    text-align: center;          /* Kutunun içindeki metni ve içeriği ortalar */
+    max-width: 500px;            /* Bir hobi kutusunun maksimum genişliğini 500px olarak sınırlar */
 }
+
+/* resimlerin özel tanımlamaları */
 
 .Dune img {
     width: 263px;
     height: 500px;
     border-radius: 12px;
-    object-fit: cover;
+    object-fit: cover;  /* Resmi çerçeveye sığacak şekilde ölçeklendirir, tüm alanı kaplar ve oranı korur */
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
@@ -84,7 +92,7 @@
     width: 323px;
     height: 500px;
     border-radius: 12px;
-    object-fit: cover;
+    object-fit: cover; 
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
@@ -119,7 +127,7 @@
     object-fit: cover;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
-
+/* -------------------------------------------------------- */
 
 
 /* Login Page Styles */
