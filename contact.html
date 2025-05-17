@@ -46,53 +46,110 @@
         </div>
     </nav>
 
-    <div class="container mt-5">
-        <h1 class="text-center sitilli-yazi mb-4">İletişim</h1>
+    <div class="container mt-5" id="iletisimBil">
+        <!--container yatayda ortalamak için, mt-5 yukarıda boşluk oluşumu, id benzersiz kimlik-->
+        <h1 class="text-center sitilli-yazi mb-4">İletişim</h1> <!--text-center yatayda ortalamak, mb-4 alt boşluk -->
 
-        <div class="kategori">
-            <form>
-                <label for="adi">Ad Soyad :</label>
-                <input type="text" name="adi"><br>
-                <input type="reset" value="reset">
-            </form> <br>
-            <form>
-                <input type="radio" name="cinsiyet" value="erkek" checked>Erkek
-                <input type="radio" name="cinsiyet" value="kadin">Kadın
-                <input type="radio" name="cinsiyet" value="hiçbiri">Hiçbiri<br>
-                Elektronik Posta Adresi<br>
-                <input type="email" name="email">
-            </form>
+        <div class="row justify-content-center ">
+            <!--row bootstrap da satır oluşumu, justify-content-center sütunları yatayda ortalama-->
+            <div class="col-md-8 kategori"> <!--col-md-8 bootstrap da 8 sütun genişliğinde,-->
+                <form action="contact-image.html" method="get">
+                    <!-- Ad Soyad -->
+                    <div class="mb-3"> <!--mb-3 alt boşluk-->
+                        <label for="adi" class="form-label sitilli-yazi2">Ad Soyad:</label>
+                        <!--form-label bootstrap özelinde form-->
+                        <input type="text" class="form-control kenarlık" id="adi" name="adi">
+                        <!-- form-control metin giriş yerini tam genişlik, dolgu ile gösteri-->
+                    </div>
 
-            <form>
-                <input type="checkbox" name="ders1" value="Web">Web Teknolojileri<br>
-                <input type="checkbox" name="ders2" value="Mat">Matematik II
-            </form>
+                    <!-- Email -->
+                    <div class="mb-3">
+                        <label for="email" class="form-label sitilli-yazi2">Elektronik Posta Adresi:</label>
+                        <input type="email" class="form-control kenarlık" id="email" name="email">
+                    </div>
 
-            <input type="submit" value="GÖNDER">
-            <input type="reset" value="reset">
-            <input type="button" value="BUTON">
-            <form>
-                <input type="file" name="dosya">
-            </form>
-            <select name="arabalar">
-                <option value="volvo">Volvo</option>
-                <option value="saab">Saab</option>
-                <option value="fiat" selected>Fiat</option>
-                <option value="audi">Audi</option>
-            </select>
-            <textarea name="mesaj" rows="10" cols="10">
-               
-            </textarea>
+                    <!-- Telefon Numarası -->
+                    <div class="mb-3">
+                        <label for="telefon" class="form-label sitilli-yazi2">Telefon Numarası:</label>
+                        <input type="tel" class="form-control kenarlık" id="telefon" name="telefon"
+                            placeholder="05XX XXX XX XX">
+                    </div>
 
+                    <!-- Cinsiyet -->
+                    <div class="mb-3">
+                        <label class="form-label sitilli-yazi2">Cinsiyet:</label>
+                        <div class="form-check form-check-inline">
+                            <!-- from check Radyo veya checkbox grupları için konteyner; konumlama ve arayüz stili sağlar.-->
+                            <input class="form-check-input kenarlık" type="radio" name="cinsiyet" id="erkek"
+                                value="erkek">
+                            <label class="form-check-label" for="erkek">Erkek</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input kenarlık" type="radio" name="cinsiyet" id="kadin"
+                                value="kadin">
+                            <label class="form-check-label" for="kadin">Kadın</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input kenarlık" type="radio" name="cinsiyet"
+                                id="belirtmek istemiyorum" value="belirtmek istemiyorum">
+                            <label class="form-check-label" for="belirtmek istemiyorum">Belirtmek İstemiyorum</label>
+                        </div>
+                    </div>
+
+                    <!-- Konu -->
+                    <div class="mb-3">
+                        <label for="konu" class="form-label sitilli-yazi2">Konu:</label>
+                        <select class="form-select kenarlık" id="konu" name="konu">
+                            <option value="" disabled selected>Lütfen bir konu seçin</option>
+                            <option value="sikayet">Şikayet</option>
+                            <option value="oneri">Öneri</option>
+                            <option value="bilgi">Bilgi Talebi</option>
+                            <option value="destek">Teknik Destek</option>
+                            <option value="diger">Diğer</option>
+                        </select>
+                    </div>
+
+                    <!-- Mesaj -->
+                    <div class="mb-4">
+                        <label for="mesaj" class="form-label sitilli-yazi2">Mesajınız:</label>
+                        <textarea class="form-control kenarlık" id="mesaj" name="mesaj" rows="5"></textarea>
+                    </div>
+
+                    <!-- Kişisel Veri Onayı -->
+                    <div class="mb-3 text-center">
+                        <div class="form-check d-inline-flex align-items-center justify-content-center">
+                            <input class="form-check-input kenarlık me-1" type="checkbox" id="veriOnay" name="veriOnay">
+                            <label class="form-check-label sitilli-yazi2 ms-1" for="veriOnay">
+                                Kişisel verilerimin, işlenmesine izin veriyorum
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Butonlar -->
+                    <div class="d-flex justify-content-between">
+                        <input type="reset" value="Temizle" class="btn btn-secondary">
+                        <div>
+                            <button type="button" class="btn btn-info me-2" id="jsValidateBtn">JS ile Doğrula</button>
+                            <button type="button" class="btn btn-warning me-2" id="vueValidateBtn">Vue.js ile Doğrula
+                            </button>
+                            <input type="submit" value="Gönder" id="submitBtn" class="btn btn-primary" disabled>
+                        </div>
+                    </div>
+                </form>
+            </div>
         </div>
-
-
     </div>
+
+    <footer class="container-fluid text-center bg-dark text-white py-3">
+        <p>&copy; 2025 - Tüm hakları saklıdır.</p>
+    </footer>
 
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- Form Validation JS -->
+    <!-- JS doğrulama -->
     <script src="contact.js"></script>
+    <!-- Vue doğrulama -->
+    <script src="Vue.js"></script>
 </body>
 
 </html>

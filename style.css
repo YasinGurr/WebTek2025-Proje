@@ -268,3 +268,7 @@
     height: 180px; 
     object-fit: cover; /* Görselin kapsayıcıya sığacak şekilde ölçeklenmesini sağlar */
 }
+
+.kenarlık {
+    border: 2px solid #052a44; /* Kenar rengi koyu mavi  ietişim sayfası için*/
+}
