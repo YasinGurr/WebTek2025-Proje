@@ -1,5 +1,5 @@
 <?php
-// filepath: c:\Users\yasin\Desktop\Web-Proje\login.php
+
 // Oturum baslat
 session_start();
 

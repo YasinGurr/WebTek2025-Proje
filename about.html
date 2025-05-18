@@ -154,33 +154,42 @@
          <!-- Telif hakkı bilgisi içeren paragraf -->
     </footer>
 
-    <!-- About.html dosyasına eklenecek kod (body kapanış tag'inden önce) -->
+    <!--giriş sonucu -->
 <script>
-    // URL'den hosgeldin parametresini kontrol et
+    // URL'den gelen parametreleri almak için URLSearchParams nesnesini oluştur
     const urlParams = new URLSearchParams(window.location.search);
+    
+    // URL'de 'hosgeldin' adında bir parametre olup olmadığını kontrol et
     if (urlParams.has('hosgeldin')) {
+        // 'hosgeldin' parametresinin değerini kullanıcı adı olarak al
         const kullaniciAdi = urlParams.get('hosgeldin');
         
-        // Hos geldin mesajini goster
+        // Bootstrap uyumlu bir uyarı kutusu (alert) elementi oluştur
         const hosgeldinDiv = document.createElement('div');
+        // Bootstrap sınıflarını ekle - başarılı (yeşil) renkte, kapatılabilir, animasyonlu görünüm
         hosgeldinDiv.className = 'alert alert-success alert-dismissible fade show';
+        // Erişilebilirlik için role özelliği ekle
         hosgeldinDiv.role = 'alert';
+        // Uyarı kutusunun içeriğini, kullanıcı adını ve kapatma düğmesini ekle
         hosgeldinDiv.innerHTML = `
             <strong>Hoş geldin ${kullaniciAdi}!</strong>
             <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
         `;
         
-        // Sayfanin en üstüne mesaji ekle
+        // Oluşturulan uyarı kutusunu sayfanın en üstüne yerleştir
         document.body.insertBefore(hosgeldinDiv, document.body.firstChild);
         
-        // 5 saniye sonra mesaji otomatik kapat
+        // Uyarı kutusunu 5 saniye sonra otomatik olarak kapat
         setTimeout(() => {
+            // Sayfadaki uyarı kutusunu seç
             const alertElement = document.querySelector('.alert');
+            // Uyarı kutusu hala sayfada ise
             if (alertElement) {
+                // Bootstrap'in Alert bileşenini kullanarak uyarıyı kapat
                 const bsAlert = new bootstrap.Alert(alertElement);
                 bsAlert.close();
             }
-        }, 5000);
+        }, 5000); // 5000 milisaniye = 5 saniye
     }
 </script>
 

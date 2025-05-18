@@ -35,7 +35,7 @@ document.addEventListener('DOMContentLoaded', function() {
         // Hata mesajlarını tutacak dizi
         let errors = [];
 
-        // Ad Soyad kontrolü - geliştirilmiş
+        // Ad Soyad kontrolü
         if (!adSoyad.trim()) {
             errors.push('Ad Soyad alanı boş bırakılamaz');
         } else {
@@ -56,7 +56,7 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         }
 
-        // Telefon kontrolü (opsiyonel olabilir) - geliştirilmiş
+        // Telefon kontrolü (opsiyonel olabilir)
         if (telefon.trim() !== '') {
             // Telefon numarasındaki boşlukları kaldır
             const cleanPhone = telefon.replace(/\s/g, '');
@@ -74,7 +74,7 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         }
 
-        // Cinsiyet kontrolü (eğer seçim zorunluysa)
+        // Cinsiyet kontrolü
         const cinsiyetSecili = document.querySelector('input[name="cinsiyet"]:checked');
         if (!cinsiyetSecili) {
             errors.push('Lütfen cinsiyet seçiniz');
