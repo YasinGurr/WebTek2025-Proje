@@ -229,11 +229,6 @@
     transition: all 0.3s ease;
 }
 
-.kategori input:focus {
-    border-color: #1abc9c;
-    box-shadow: 0 0 8px rgba(26, 188, 156, 0.5);
-}
-
 .giris-btn {
     background-color: #052a44;
     border-color: #052a44;
