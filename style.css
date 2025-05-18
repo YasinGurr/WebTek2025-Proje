@@ -212,3 +212,36 @@
 .kenarlık {
     border: 2px solid #052a44; /* Kenar rengi koyu mavi  ietişim sayfası için*/
 }
+
+/* login kısmı için */
+
+/* Login sayfası stilleri */
+.login-bg {
+    background-color: #f5f5f5;
+    min-height: 100vh;
+}
+
+.kategori input {
+    border: 2px solid #052a44;
+    border-radius: 6px;
+    padding: 10px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+.kategori input:focus {
+    border-color: #1abc9c;
+    box-shadow: 0 0 8px rgba(26, 188, 156, 0.5);
+}
+
+.giris-btn {
+    background-color: #052a44;
+    border-color: #052a44;
+    font-weight: bold;
+    padding: 10px;
+    transition: all 0.3s ease;
+}
+
+.giris-btn:hover {
+    background-color: #031b2c;
+}
