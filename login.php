@@ -18,8 +18,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $_SESSION["kullanici"] = $eposta;
         $_SESSION["kullaniciAdi"] = $kullaniciAdi;
         
-        // Hos geldin mesaji ile about.html sayfasina yonlendir
-        header("Location: about.html?hosgeldin=" . $kullaniciAdi);
+        // Hos geldin mesaji ile index.html sayfasina yonlendir
+        header("Location: index.html?hosgeldin=" . $kullaniciAdi);
         exit();
     } else {
         // Gecersiz giris
