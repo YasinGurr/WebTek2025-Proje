@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // JavaScript ile form doğrulama fonksiyonu
+    // JavaScript ile form doğrulama fonksiyonu.
     function validateWithJS() {
         // Form elemanlarını al
         const adSoyad = document.getElementById('adi') ? document.getElementById('adi').value : '';
